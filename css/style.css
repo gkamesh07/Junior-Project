@@ -1,0 +1,196 @@
+html {
+    font-family: 'Inter', sans-serif !important;
+    font-size: 14px;
+    font-weight: 400,700;
+    background: linear-gradient(to bottom ,hsl(225, 100%, 98%), hsl(0, 0%, 100%), hsl(0, 0%, 100%));
+    background-repeat: no-repeat;
+}
+
+body {
+    font-family: 'Inter', sans-serif !important;
+    font-size: 14px;
+    font-weight: 400,700;
+}
+
+[data-theme="light"] {
+  --bg-top: hsl(225, 100%, 98%);
+  --font-color-dark: hsl(230, 17%, 14%);
+  --bg-dark: hsl(0, 0%, 100%);
+  --bg-color-dark: hsl(227, 47%, 96%);
+  --card-hover-dark: hsl(227, 40%, 92%);
+  
+}
+
+[data-theme="dark"] {
+  --bg-top: hsl(232, 28%, 21%);
+  --font-color-dark: hsl(0, 0%, 100%);
+  --bg-dark: hsl(230, 17%, 14%);
+  --bg-color-dark: hsl(228, 28%, 20%);
+  --card-hover-dark: hsl(228, 28%, 25%);
+  
+}
+
+
+body {
+ /* background-color: var(--bg-dark);*/
+ background: linear-gradient(to bottom , var(--bg-top) 5% , var(--bg-dark) 70%);
+  color: var(--font-color-dark);
+}
+
+.bg-primary{
+  background-color: var(--bg-color-dark) !important;
+}
+.card:hover {
+  background-color: var(--card-hover-dark) !important;
+}
+
+.theme-switch-wrapper {
+  display: flex;
+  align-items: center;
+
+  em {
+    margin-left: 10px;
+    font-size: 1rem;
+  }
+}
+.theme-switch {
+  display: inline-block;
+  height: 34px;
+  position: relative;
+  width: 60px;
+}
+
+.theme-switch input {
+  display:none;
+}
+
+.text-success {
+  color: hsl(163, 72%, 41%) !important;
+}
+
+.text-danger {
+  color: hsl(356, 69%, 56%) !important;
+}
+
+.text-sec {
+    color: hsl(228, 12%, 44%) !important;
+} 
+
+.text-sec1 {
+    color: rgb(152, 153, 153) !important;
+}
+
+.container {
+    width: 1440px !important;
+    margin: auto !important;
+}
+
+.card {
+  transition: 0.3s !important;
+  border-radius: 7px !important;
+}
+
+
+.card-1 {
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0,0,0,.125);
+  border-radius: .25rem;  
+
+}
+
+.b-fb {
+    border-top-color: hsl(208, 92%, 53%);
+    border-top-width: 5px;
+}
+
+.b-twi {
+    border-top-color: hsl(203, 89%, 53%);
+    border-top-width: 5px;
+}
+/*
+.b-insta {
+    width: 20px;
+    height: 5px;
+    background-image: linear-gradient(to right,hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+}
+*/
+.b-insta {
+  border-top-style: solid;
+  border-image: linear-gradient(to right, hsl(37, 97%, 70%) 30%, hsl(329, 70%, 58%) 80%) 100% 0 100% 0/5px 0 0 0;
+}
+.b-yt {
+    border-top-color:hsl(348, 97%, 39%);
+    border-top-width: 5px;
+}
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right,hsl(210, 78%, 56%) , hsl(146, 40%, 37%));
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 4px;
+    bottom: 4px;
+    background-color: hsl(228, 28%, 20%);
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background: hsl(230, 22%, 74%);
+  }
+  
+  input:checked + .slider:hover {
+    background: linear-gradient(to right,hsl(210, 78%, 56%) , hsl(146, 40%, 37%));
+  }
+
+  input:focus + .slider {
+    box-shadow: 0 0 1px hsl(230, 22%, 74%);
+  }
+
+  input:checked + .slider:before {
+    transition: 0.4s;
+    background: white;
+    transform: translateX(25px);
+  }
+
+
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
